@@ -6,3 +6,18 @@ colorButton.addEventListener("click", () => {
     const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
     document.body.style.backgroundColor = randomColor;
 });
+
+function initMap() {
+    const argentina = { lat: -38.4161, lng: -63.6167 }; // Coordenadas de Argentina
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 4,
+        center: argentina,
+    });
+
+    new google.maps.Marker({
+        position: argentina,
+        map: map,
+        title: "Argentina",
+    });
+}
+
