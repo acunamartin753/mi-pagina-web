@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #f4f4f4;
+    transition: background-color 0.5s ease; /* Para cambiar el color de fondo dinámicamente */
 }
 
 header {
@@ -11,8 +13,43 @@ header {
     padding: 1em 0;
 }
 
+button {
+    margin: 1em;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    background-color: #fff;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
 main {
     margin: 2em;
+}
+
+.animation-box {
+    width: 100px;
+    height: 100px;
+    margin: 2em auto;
+    background-color: #4CAF50;
+    animation: bounce 2s infinite;
+    border-radius: 50%;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
 }
 
 footer {
