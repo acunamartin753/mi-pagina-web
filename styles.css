@@ -34,22 +34,11 @@ main {
     margin: 2em;
 }
 
-.animation-box {
-    width: 100px;
-    height: 100px;
-    margin: 2em auto;
-    background-color: #4CAF50;
-    animation: bounce 2s infinite;
-    border-radius: 50%;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-50px);
-    }
+#map {
+    height: 400px;
+    width: 100%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
 }
 
 footer {
@@ -60,12 +49,3 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
-#map {
-    height: 400px;
-    width: 100%;
-    margin: 20px auto;
-    border: 1px solid #ccc;
-}
-
-
