@@ -7,17 +7,19 @@ colorButton.addEventListener("click", () => {
     document.body.style.backgroundColor = randomColor;
 });
 
-function initMap() {
-    const argentina = { lat: -38.4161, lng: -63.6167 }; // Coordenadas de Argentina
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 4,
-        center: argentina,
-    });
+document.addEventListener("DOMContentLoaded", () => {
+    const argentinaCoords = [-38.4161, -63.6167]; // Coordenadas de Argentina
 
-    new google.maps.Marker({
-        position: argentina,
-        map: map,
-        title: "Argentina",
-    });
-}
+    const map = L.map("map").setView(argentinaCoords, 4);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    L.marker(argentinaCoords)
+        .addTo(map)
+        .bindPopup("¡Aquí está Argentina!")
+        .openPopup();
+});
+
 
